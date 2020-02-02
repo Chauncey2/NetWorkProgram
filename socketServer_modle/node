@@ -1,0 +1,22 @@
+网络应用编程——SocketServer模块
+
+SocketServer是标准库中的一个高级模块（Python 3.x中重命名为socketserver），
+它的目标是简化很多样板代码——创建网络客户端和服务器所必须的代码
+除了隐藏细节，另外一个好处可以用类来编写应用程序，除了有助于组织数据，还能逻辑性地将功能房在正确地方，
+此外应用程序是事件驱动，这意味着只有在系统中的事件发生时，他们才会工作。
+
+socketserver服务器
+    定义主机地址，端口，缓冲区大小，
+    定义类，继承（StreamRequsetHandle类）
+    重载handle方法
+        编写处理程序
+    类外定义TCPServer 对象，启动服务
+
+socketserver客户端
+    和其他的类似
+
+注意事项：
+    1.socketserver模块属于内置模块，不需要导入，此外，导入命名和UNIX系统也有所区别
+      from socketserver import * (Python 3.7.2 win)
+      from SocketServer import * (Python 3.x UNIX)
+    2.
